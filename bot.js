@@ -32,6 +32,10 @@ client.on('message', msg => {
       case '-nichis':
         msg.reply('NIIIIIIIIIICHIIIIIIIIIIIIIIIIIS \u{1F3F3}\u{FE0F}\u{200D}\u{1F308}');
         break;
+        
+      case '-naked':
+        msg.reply('te caes a pedazos');
+        break;  
 
       case '-pato':
         msg.reply('me la como y que?');
