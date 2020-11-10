@@ -1,5 +1,7 @@
 console.log('Initializing!')
 require('dotenv').config();
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+const http = new XMLHttpRequest()
 
 const Discord_Token = process.env.DISCORD_TOKEN;
 
@@ -34,7 +36,13 @@ client.on('message', msg => {
       case '-git':
         msg.channel.send('https://github.com/lucasliano/DiscordBot');
         break;
-
+        
+      case '-usd':
+        http.open("GET", "https://www.dolarhoy.com/cotizacion-dolar-blue");
+        http.send();
+        http.onload = () => msg.channel.send(http.responseText.slice(5802,5810) + " Venta\n" + http.responseText.slice(5931,5939) + " Compra");
+      break;
+        
       case '-nichis':
         msg.channel.send('NIIIIIIIIIICHIIIIIIIIIIIIIIIIIS \u{1F3F3}\u{FE0F}\u{200D}\u{1F308}');
         break;
