@@ -46,6 +46,10 @@ client.on('message', msg => {
       case '-counters de palu':
         msg.channel.send('El counter de Palu es jugar sin miedo!')
         break;
+        
+      case '-naked':
+        msg.reply('te caes a pedazos');
+        break;  
 
       case '-pato':
         msg.channel.send('Pato: me la como y que?');
