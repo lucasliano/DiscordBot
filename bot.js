@@ -67,8 +67,8 @@ client.on('message', msg => {
         msg.channel.send('CHICHI DEJA DE SER TAN TROLO LA PUTA MADRE \u{1F3F3}\u{FE0F}\u{200D}\u{1F308}');
         break;
 
-      case '-naked':
-        msg.reply('Te caes a pedazos');
+      case '-sox':
+        msg.reply('CHUPAME LA PIJA\nel nuevo fichaje de astralis');
         break;
     // IMPORTANTE NO PONER NADA EN DEFAULT: !!! SINO EXPLOTA EL SERVER.
     }
