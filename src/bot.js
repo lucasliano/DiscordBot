@@ -39,6 +39,11 @@ module.exports = {
           case '-hi':
             msg.reply('Hello!');
             break;
+            
+          case '-sox':
+             msg.reply('nuevo fichaje de astralis!');
+            break;
+
 
           case '-git':
             msg.channel.send('https://github.com/lucasliano/DiscordBot');
