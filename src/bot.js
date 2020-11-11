@@ -28,7 +28,19 @@ module.exports = {
       if(msg.channel.id == '775510593028751441'){
         if (msg.content.slice(0,4) == '-lol'){
           champ = msg.content.split(/\s+/);
-          msg.channel.send('https://las.op.gg/champion/' + champ[1] );
+          var largo = champ.length;
+          if (largo < 1)
+            msg.channel.send('https://las.op.gg/champion/' + champ[1] );
+          if (largo > 1){
+            var i = 1;
+            var nombre = '';
+            while(i < largo){
+              nombre = nombre + ' ' + champ[i];
+              i++;
+            }
+            msg.channel.send('https://las.op.gg/champion/' + nombre );
+          }
+            
         }
 
         switch (msg.content){
