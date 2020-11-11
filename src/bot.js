@@ -27,8 +27,8 @@ module.exports = {
     {
       if(msg.channel.id == '775510593028751441'){
         if (msg.content.slice(0,4) == '-lol'){
-          champ = msg.content.split(' ',100);
-          msg.channel.send('https://las.op.gg/champion/' + champ[2] );
+          champ = msg.content.split(/\s+/);
+          msg.channel.send('https://las.op.gg/champion/' + champ[1] );
         }
 
         switch (msg.content){
