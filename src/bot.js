@@ -83,6 +83,10 @@ module.exports = {
               msg.channel.send('Pity y Mazia loós amiigoss \u{1F4C8}');
               break;
 
+          case '-default':
+            msg.channel.send('No pongas default pedazo de gran persona');
+            break;
+            
           case '-updateSrc':
             console.log('Ending session');
             client.destroy();
@@ -93,6 +97,7 @@ module.exports = {
             console.log('Ending session');
             client.destroy();
             break;
+            
 
 
         // IMPORTANTE NO PONER NADA EN DEFAULT: !!! SINO EXPLOTA EL SERVER.
