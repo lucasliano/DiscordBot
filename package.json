@@ -1,15 +1,17 @@
 {
-  "name": "testing-bot",
+  "name": "gucci-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "bot.js",
+  "main": "start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Lucas Liaño",
+  "author": "Lucas Liaño, Tomas Perez",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.4.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "node-cmd": "^3.0.0",
+    "xmlhttprequest": "^1.8.0"
   }
 }
