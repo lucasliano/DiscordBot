@@ -29,13 +29,13 @@ module.exports = {
         if (msg.content.slice(0,4) == '-lol'){
           champ = msg.content.split(/\s+/);
           var largo = champ.length;
-          if (largo < 1)
+          if (largo < 2)
             msg.channel.send('https://las.op.gg/champion/' + champ[1] );
-          if (largo > 1){
-            var i = 1;
-            var nombre = '';
+          if (largo > 2){
+            var i = 2;
+            var nombre = champ[1];
             while(i < largo){
-              nombre = nombre + ' ' + champ[i];
+              nombre = nombre + champ[i];
               i++;
             }
             msg.channel.send('https://las.op.gg/champion/' + nombre );
