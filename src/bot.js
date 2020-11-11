@@ -31,6 +31,7 @@ module.exports = {
           var largo = champ.length;
           if (largo = 2)
             msg.channel.send('https://las.op.gg/champion/' + champ[1] );
+            msg.channel.send(largo);
           if (largo > 2){
             var i = 2;
             var nombre = champ[1];
@@ -38,7 +39,6 @@ module.exports = {
               nombre = nombre + champ[i];
               i++;
             }
-            msg.channel.send(nombre);
             msg.channel.send('https://las.op.gg/champion/' + nombre );
           }
             
