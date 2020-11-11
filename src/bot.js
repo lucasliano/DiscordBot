@@ -79,9 +79,13 @@ module.exports = {
             msg.channel.send('CHICHI DEJA DE SER TAN TROLO LA PUTA MADRE \u{1F3F3}\u{FE0F}\u{200D}\u{1F308}');
             break;
 
-            case '-pity':
-              msg.channel.send('Pity y Mazia loós amiigoss \u{1F4C8}');
-              break;
+          case '-pity':
+            msg.channel.send('Pity y Mazia loós amiigoss \u{1F4C8}');
+            break;
+            
+          case '-mazia':
+            msg.channel.send('Mazia y Pity los novios \u{1F4C8}');
+            break;
 
           case '-default':
             msg.channel.send('No pongas default pedazo de gran persona');
