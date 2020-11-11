@@ -70,6 +70,10 @@ module.exports = {
           case '-naked':
             msg.reply('te caes a pedazos');
             break;
+            
+            case '-palu':
+            msg.reply('Soy un capo');
+            break;
 
           case '-pato':
             msg.channel.send('Pato: me la como y que?');
@@ -84,7 +88,7 @@ module.exports = {
             break;
             
           case '-mazia':
-            msg.channel.send('Mazia y Pity los novios \u{1F4C8}');
+            msg.channel.send('Mazia y Pity los aaamiigooos \u{1F4C8}');
             break;
 
           case '-default':
