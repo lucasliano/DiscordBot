@@ -29,6 +29,7 @@ module.exports = {
         if (msg.content.slice(0,4) == '-lol'){
           champ = msg.content.split(/\s+/);
           var largo = champ.length;
+          msg.channel.send(largo);
           if (largo < 2)
             msg.channel.send('https://las.op.gg/champion/' + champ[1] );
           if (largo > 2){
