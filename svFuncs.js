@@ -11,7 +11,7 @@ module.exports = {
       cmd.run('git reset --hard');
       cmd.run('git pull --force');
       console.log("> [GIT] Updated with origin/master");
-      cmd.run('node start.js > stdout.txt 2> stderr.txt &')
+      cmd.run('sudo node start.js > stdout.txt 2> stderr.txt &')
     } catch (error)
     {
       console.error("Error on 'updateSrc()'" + error);
