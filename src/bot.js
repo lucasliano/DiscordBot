@@ -8,6 +8,7 @@ module.exports = {
     // HTTP setup
     var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
     const http = new XMLHttpRequest()
+    const imgrq = new XMLHttpRequest()
 
     // Discrod.js setup
     const Discord = require('discord.js');
@@ -26,6 +27,17 @@ module.exports = {
     client.on('message', msg =>
     {
       if(msg.channel.id == '775510593028751441'){
+        
+        if (msg.content.slice(0,4) == '-img'){
+          param = msg.content.split(/\s+/);
+          imgrq.open("GET", 'https://espanol.images.search.yahoo.com/search/images;_ylt=AwrE1x2FGqxfSkkAq28DEQx.;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3BpdnM-?p=' + param + '&fr2=piv-web&fr=yfp-t");
+          imgrq.send();
+          //para probar mando el link de la foto, pero hay que incluir la clase Attachment y enviarlo como un opjeto img
+          //cambiar const {Client, Attachment} = require('discord.js'); y const client = new Client();
+          //const attachment = new Attachment(url)
+          imgrq.onload = () => msg.channel.send(imgrq.responseText.slice(imgrq.responseText.search('<img data-src=')+15,imgrq.responseText.search('<img data-src=')+100));           
+            };
+        
         if (msg.content.slice(0,4) == '-lol'){
           champ = msg.content.split(/\s+/);
           var largo = champ.length;
@@ -43,7 +55,6 @@ module.exports = {
           }
             
         }
-
         switch (msg.content){
           case '-ayudameporfi':
             msg.reply('todavía no funciona esto pana \u{1F52B}');
