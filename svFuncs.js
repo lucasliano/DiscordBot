@@ -1,19 +1,15 @@
 // svFuncs.js
 
+// DO NOT CHANGE ANYTHING HERE!
+
 module.exports = {
   updateSrc: function ( cmd )
   {
     try{
       cmd.run('chmod 777 git.sh'); /* :/ Fix no perms after updating */
-      cmd.run('./git.sh');
-      // cmd.get('git.sh', (err, data) => {  // Run our script
-      //   if (data) console.log(data);
-      //   if (err) console.log(err);
-      // });
-
-
-      cmd.run('refresh');  // Refresh project
-
+      cmd.run('git fetch');
+      cmd.run('git reset --hard');
+      cmd.run('git pull --force');
       console.log("> [GIT] Updated with origin/master");
     } catch (error)
     {
