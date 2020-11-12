@@ -68,6 +68,12 @@ module.exports = {
             msg.reply('Hello!');
             break;
             
+          case '-prendas':
+            var prendas = {'gucci':['https://s3-us-west-2.amazonaws.com/repo.diariojornada.com.ar/imagenes/2020/10/4/513178_4547_slider.jpg','https://media.gucci.com/style/DarkGray_South_0_160_316x316/1567187105/597612_96IWT_8745_001_100_0000_Light-Cartera-Ophidia-con-GG-y-cremallera.jpg','https://i.pinimg.com/474x/46/44/ff/4644ff5aecbe85db98ffef22dfcf7a6a.jpg'],'bross':['https://d26lpennugtm8s.cloudfront.net/stores/001/273/821/products/d145ee57-d73d-428b-8219-f94612e6911e_nube-7eb37807352faea90115963431641456-1024-1024.jpg','https://static.bross.com.ar/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/7/8/783228986.jpg.jpg','https://images-na.ssl-images-amazon.com/images/I/61z9qjIj6oL._AC_UX385_.jpg','']};
+            var random = prendas[Object.keys(prendas)[Math.floor(Math.random()*Object.keys(prendas).length)]]
+            msg.channel.send(random[Math.floor(Math.random()*random.length)])
+            break;
+            
           case '-sox':
              msg.reply('nuevo fichaje de astralis!');
             break;
