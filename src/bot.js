@@ -76,7 +76,7 @@ module.exports = {
             break;
 
           case '-persona':
-            msg-channel.send('https://thispersondoesnotexist.com/image');
+            msg.channel.send('https://thispersondoesnotexist.com/image');
             break;
 
           case '-sox':
