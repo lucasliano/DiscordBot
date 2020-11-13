@@ -5,11 +5,11 @@ module.exports = {
   {
     // cmd
     const cmd = require("node-cmd");
-    // HTTP setup
+    // httpXML setup
     var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-    const http = new XMLHttpRequest()
+    const httpXML = new XMLHttpRequest()
     const imgrq = new XMLHttpRequest()
-
+    const http = require('http');
     // Discrod.js setup
     const Discord = require('discord.js');
     const client = new Discord.Client();
@@ -76,7 +76,9 @@ module.exports = {
             break;
 
           case '-persona':
-            msg.channel.send('https://thispersondoesnotexist.com/image');
+            msg.channel.send({
+              files: ['thispersondoesnotexist.com/image']
+            })
             break;
 
           case '-sox':
@@ -88,9 +90,9 @@ module.exports = {
             break;
 
           case '-usd':
-            http.open("GET", "https://www.dolarhoy.com/cotizacion-dolar-blue");
-            http.send();
-            http.onload = () => msg.channel.send(http.responseText.slice(5802,5810) + " Venta\n" + http.responseText.slice(5931,5939) + " Compra");
+            httpXML.open("GET", "https://www.dolarhoy.com/cotizacion-dolar-blue");
+            httpXML.send();
+            httpXML.onload = () => msg.channel.send(httpXML.responseText.slice(5802,5810) + " Venta\n" + httpXML.responseText.slice(5931,5939) + " Compra");
           break;
 
           case '-nichis':
