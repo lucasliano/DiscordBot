@@ -27,11 +27,11 @@ module.exports = {
     client.on('message', msg =>
     {
       if(msg.channel.id == '775510593028751441'){
-        
+
         if (msg.content.slice(0,4) == '-img'){
           param = msg.content.split(/\s+/);
           imgrq.open("GET", 'https://espanol.images.search.yahoo.com/search/images;_ylt=AwrE1x2FGqxfSkkAq28DEQx.;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3BpdnM-?p=' + param + '&fr2=piv-web&fr=yfp-t');
-          
+
           //para probar mando el link de la foto, pero hay que incluir la clase Attachment y enviarlo como un opjeto img
           //cambiar const {Client, Attachment} = require('discord.js'); y const client = new Client();
           //const attachment = new Attachment(url)
@@ -41,7 +41,7 @@ module.exports = {
           };
           imgrq.send();
         };
-        
+
         if (msg.content.slice(0,4) == '-lol'){
           champ = msg.content.split(/\s+/);
           var largo = champ.length;
@@ -57,7 +57,7 @@ module.exports = {
             }
             msg.channel.send('https://las.op.gg/champion/' + nombre );
           }
-            
+
         }
         switch (msg.content){
           case '-ayudameporfi':
@@ -67,13 +67,14 @@ module.exports = {
           case '-hi':
             msg.reply('Hello!');
             break;
-            
+
           case '-prendas':
-            var prendas = {'gucci':['https://s3-us-west-2.amazonaws.com/repo.diariojornada.com.ar/imagenes/2020/10/4/513178_4547_slider.jpg','https://media.gucci.com/style/DarkGray_South_0_160_316x316/1567187105/597612_96IWT_8745_001_100_0000_Light-Cartera-Ophidia-con-GG-y-cremallera.jpg','https://i.pinimg.com/474x/46/44/ff/4644ff5aecbe85db98ffef22dfcf7a6a.jpg'],'bross':['https://d26lpennugtm8s.cloudfront.net/stores/001/273/821/products/d145ee57-d73d-428b-8219-f94612e6911e_nube-7eb37807352faea90115963431641456-1024-1024.jpg','https://static.bross.com.ar/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/7/8/783228986.jpg.jpg','https://images-na.ssl-images-amazon.com/images/I/61z9qjIj6oL._AC_UX385_.jpg','']};
+            var prendas = {'gucci':['https://s3-us-west-2.amazonaws.com/repo.diariojornada.com.ar/imagenes/2020/10/4/513178_4547_slider.jpg','https://media.gucci.com/style/DarkGray_South_0_160_316x316/1567187105/597612_96IWT_8745_001_100_0000_Light-Cartera-Ophidia-con-GG-y-cremallera.jpg','https://i.pinimg.com/474x/46/44/ff/4644ff5aecbe85db98ffef22dfcf7a6a.jpg'],
+                           'bross':['https://d26lpennugtm8s.cloudfront.net/stores/001/273/821/products/d145ee57-d73d-428b-8219-f94612e6911e_nube-7eb37807352faea90115963431641456-1024-1024.jpg','https://static.bross.com.ar/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/7/8/783228986.jpg.jpg','https://images-na.ssl-images-amazon.com/images/I/61z9qjIj6oL._AC_UX385_.jpg','']};
             var random = prendas[Object.keys(prendas)[Math.floor(Math.random()*Object.keys(prendas).length)]]
             msg.channel.send(random[Math.floor(Math.random()*random.length)])
             break;
-            
+
           case '-sox':
              msg.reply('nuevo fichaje de astralis!');
             break;
@@ -104,7 +105,7 @@ module.exports = {
           case '-naked':
             msg.reply('te caes a pedazos');
             break;
-            
+
             case '-palu':
             msg.reply('Soy un capo');
             break;
@@ -120,7 +121,7 @@ module.exports = {
           case '-pity':
             msg.channel.send('Pity y Mazia loós amiigoss \u{1F4C8}');
             break;
-            
+
           case '-mazia':
             msg.channel.send('Mazia y Pity los aaamiigooos \u{1F4C8}');
             break;
@@ -128,7 +129,7 @@ module.exports = {
           case '-default':
             msg.channel.send('No pongas default pedazo de gran persona');
             break;
-            
+
           case '-updateSrc':
             console.log('Ending session');
             client.destroy();
@@ -139,7 +140,7 @@ module.exports = {
             console.log('Ending session');
             client.destroy();
             break;
-            
+
 
 
         // IMPORTANTE NO PONER NADA EN DEFAULT: !!! SINO EXPLOTA EL SERVER.
