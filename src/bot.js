@@ -75,10 +75,13 @@ module.exports = {
             msg.channel.send(random[Math.floor(Math.random()*random.length)])
             break;
 
+          case '-persona':
+            msg-channel.send('https://thispersondoesnotexist.com/image');
+            break;
+
           case '-sox':
              msg.reply('nuevo fichaje de astralis!');
             break;
-
 
           case '-git':
             msg.channel.send('https://github.com/lucasliano/DiscordBot');
