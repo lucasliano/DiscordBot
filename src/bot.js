@@ -1,7 +1,7 @@
 // bot.js
 
 module.exports = {
-  run: function (svFuncs)
+  run: function ()
   {
     // cmd
     const cmd = require("node-cmd");
@@ -13,10 +13,8 @@ module.exports = {
     // Discrod.js setup
     const Discord = require('discord.js');
     const client = new Discord.Client();
-    const Discord_Token = process.env.DISCORD_TOKEN;
+    const Discord_Token = process.env.GUCCI_TOKEN;
     client.login(Discord_Token);
-
-    var update = false;
 
     // ready event
     client.on('ready', () => {
@@ -131,12 +129,6 @@ module.exports = {
 
           case '-default':
             msg.channel.send('No pongas default pedazo de gran persona');
-            break;
-
-          case '-updateSrc':
-            console.log('Ending session');
-            client.destroy();
-            svFuncs.updateSrc(cmd);
             break;
 
           case '-close':

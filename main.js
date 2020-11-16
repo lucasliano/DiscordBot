@@ -2,7 +2,6 @@ console.log('Initializing!');
 require('dotenv').config();
 const path = require('path');
 const bot = require("./src/bot.js");
-const svFuncs = require("./svFuncs.js");
 
 
 const Pool = require('worker-threads-pool')
@@ -23,7 +22,7 @@ const Pool = require('worker-threads-pool')
 try
 {
   console.log('Done Initializing!');
-  bot.run(svFuncs);
+  bot.run();
 } catch (error)
 {
   console.error("Error on 'bot.run();' " + error);
