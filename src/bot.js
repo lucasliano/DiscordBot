@@ -72,11 +72,11 @@ module.exports = {
             break;
 
           case '-pato':
-            msg.channel.send('Pato: me la como y que?');
+            msg.channel.send('Pato: hola?');
             break;
 
           case '-chichi':
-            msg.channel.send('CHICHI DEJA DE SER TAN TROLO LA PUTA MADRE \u{1F3F3}\u{FE0F}\u{200D}\u{1F308}');
+            msg.channel.send('CHICHI DEJA DE SER TAN LINDO LA PUTA MADRE \u{1F3F3}\u{FE0F}\u{200D}\u{1F308}');
             break;
 
             case '-pity':
